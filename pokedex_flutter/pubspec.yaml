@@ -1,24 +1,24 @@
-name: pokedex_flutter
+name: flutter_timer
 description: A new Flutter project.
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 version: 1.0.0+1
+publish_to: none
 
 environment:
-  sdk: '>=2.19.4 <3.0.0'
+  sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
+  bloc: ^8.1.0
+  equatable: ^2.0.3
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  flutter_bloc: ^8.0.0
+  flutter_bloc: ^8.1.1
 
 dev_dependencies:
+  bloc_test: ^9.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  mocktail: ^0.3.0
+  very_good_analysis: ^3.1.0
 
 flutter:
   uses-material-design: true
