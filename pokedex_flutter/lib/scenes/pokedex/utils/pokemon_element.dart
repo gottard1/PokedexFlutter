@@ -68,82 +68,82 @@ extension ElementTypeExtension on ElementType {
   String get image {
     switch (this) {
       case ElementType.FIRE:
-        return 'assets/FireElement.svg';
+        return 'assets/pokemon/element/FireElement.svg';
       case ElementType.WATER:
-        return "assets/WaterElement.svg";
+        return "assets/pokemon/element/WaterElement.svg";
       case ElementType.GRASS:
-        return "assets/GrassElement.svg";
+        return "assets/pokemon/element/GrassElement.svg";
       case ElementType.POISON:
-        return "assets/PoisonElement.svg";
+        return "assets/pokemon/element/PoisonElement.svg";
       case ElementType.FLYING:
-        return "assets/FlyingElement.svg";
+        return "assets/pokemon/element/FlyingElement.svg";
       case ElementType.BUG:
-        return "assets/BugElement.svg";
+        return "assets/pokemon/element/BugElement.svg";
       case ElementType.ELECTRIC:
-        return "assets/ThunderElement.svg";
+        return "assets/pokemon/element/ThunderElement.svg";
       case ElementType.FAIRY:
-        return "assets/FairyElement.svg";
+        return "assets/pokemon/element/FairyElement.svg";
       case ElementType.GROUND:
-        return "assets/GroundElement.svg";
+        return "assets/pokemon/element/GroundElement.svg";
       case ElementType.ROCK:
-        return "assets/RockElement.svg";
+        return "assets/pokemon/element/RockElement.svg";
       case ElementType.PSYCHIC:
-        return "assets/PsychicElement.svg";
+        return "assets/pokemon/element/PsychicElement.svg";
       case ElementType.STEEL:
-        return "assets/SteelElement.svg";
+        return "assets/pokemon/element/SteelElement.svg";
       case ElementType.FIGHTING:
-        return "assets/FightElement.svg";
+        return "assets/pokemon/element/FightElement.svg";
       case ElementType.DARK:
-        return "assets/DarkElement.svg";
+        return "assets/pokemon/element/DarkElement.svg";
       case ElementType.GHOST:
-        return "assets/GhostElement.svg";
+        return "assets/pokemon/element/GhostElement.svg";
       case ElementType.ICE:
-        return "assets/IceElement.svg";
+        return "assets/pokemon/element/IceElement.svg";
       case ElementType.DRAGON:
-        return "assets/DragonElement.svg";
+        return "assets/pokemon/element/DragonElement.svg";
       case ElementType.NORMAL:
-        return "assets/NormalElement.svg";
+        return "assets/pokemon/element/NormalElement.svg";
     }
   }
 
   String get icon {
     switch (this) {
       case ElementType.FIRE:
-        return 'assets/icon/fireIcon.svg';
+        return 'assets/pokemon/icon/fireIcon.svg';
       case ElementType.WATER:
-        return 'assets/icon/waterIcon.svg';
+        return 'assets/pokemon/icon/waterIcon.svg';
       case ElementType.GRASS:
-        return 'assets/icon/grassIcon.svg';
+        return 'assets/pokemon/icon/grassIcon.svg';
       case ElementType.POISON:
-        return 'assets/icon/poisonIcon.svg';
+        return 'assets/pokemon/icon/poisonIcon.svg';
       case ElementType.FLYING:
-        return 'assets/icon/flyingIcon.svg';
+        return 'assets/pokemon/icon/flyingIcon.svg';
       case ElementType.BUG:
-        return 'assets/icon/bugIcon.svg';
+        return 'assets/pokemon/icon/bugIcon.svg';
       case ElementType.ELECTRIC:
-        return 'assets/icon/thunderIcon.svg';
+        return 'assets/pokemon/icon/thunderIcon.svg';
       case ElementType.FAIRY:
-        return 'assets/icon/fairyIcon.svg';
+        return 'assets/pokemon/icon/fairyIcon.svg';
       case ElementType.GROUND:
-        return 'assets/icon/groundIcon.svg';
+        return 'assets/pokemon/icon/groundIcon.svg';
       case ElementType.ROCK:
-        return 'assets/icon/rockIcon.svg';
+        return 'assets/pokemon/icon/rockIcon.svg';
       case ElementType.PSYCHIC:
-        return 'assets/icon/psychicIcon.svg';
+        return 'assets/pokemon/icon/psychicIcon.svg';
       case ElementType.STEEL:
-        return 'assets/icon/steelIcon.svg';
+        return 'assets/pokemon/icon/steelIcon.svg';
       case ElementType.FIGHTING:
-        return 'assets/icon/fightIcon.svg';
+        return 'assets/pokemon/icon/fightIcon.svg';
       case ElementType.DARK:
-        return 'assets/icon/darkIcon.svg';
+        return 'assets/pokemon/icon/darkIcon.svg';
       case ElementType.GHOST:
-        return 'assets/icon/ghostIcon.svg';
+        return 'assets/pokemon/icon/ghostIcon.svg';
       case ElementType.ICE:
-        return 'assets/icon/iceIcon.svg';
+        return 'assets/pokemon/icon/iceIcon.svg';
       case ElementType.DRAGON:
-        return 'assets/icon/dragonIcon.svg';
+        return 'assets/pokemon/icon/dragonIcon.svg';
       case ElementType.NORMAL:
-        return 'assets/icon/normalIcon.svg';
+        return 'assets/pokemon/icon/normalIcon.svg';
     }
   }
 
