@@ -9,9 +9,12 @@ environment:
 dependencies:
   bloc: ^8.1.0
   equatable: ^2.0.3
+  
   flutter:
     sdk: flutter
+
   flutter_bloc: ^8.1.1
+  flutter_svg: ^2.0.4
 
 dev_dependencies:
   bloc_test: ^9.0.0
@@ -22,3 +25,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/icon
+  fonts:
+    - family: poppins
+      fonts:
+        - asset: fonts/Poppins-Black.ttf
+        - asset: fonts/Poppins-Bold.ttf

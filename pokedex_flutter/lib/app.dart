@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-
-import 'Timer/View/Timer_page.dart';
+import 'package:flutter_timer/scenes/pokedex/view/pokedex.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Timer',
+      title: 'Pokedex',
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 2, 172, 202),
+        primaryColor: Color.fromARGB(255, 255, 255, 255),
         colorScheme: const ColorScheme.light(
-          secondary: Color.fromRGBO(104, 106, 156, 1),
+          secondary: Color.fromRGBO(255, 255, 255, 1),
         ),
       ),
-      home: const TimerPage(),
+      home: Pokedex(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
