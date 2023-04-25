@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_timer/scenes/pokedex/utils/pokemon_element.dart';
-import 'package:flutter_timer/scenes/pokedex/utils/pokemon_list.dart';
-import 'package:flutter_timer/scenes/pokedex/view/components/pokedex_tag_widget.dart';
+import 'package:flutter_timer/utils/pokemon_element.dart';
+import 'package:flutter_timer/utils/pokemon_list.dart';
+import 'package:flutter_timer/scenes/pokedex/widgets/pokedex_tag_widget.dart';
 
 class PokedexList extends StatelessWidget {
   final PokemonList pokemon;

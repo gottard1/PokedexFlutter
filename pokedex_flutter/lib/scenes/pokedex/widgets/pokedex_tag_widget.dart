@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../utils/pokemon_element.dart';
+import '../../../utils/pokemon_element.dart';
 
 class PokedexTag extends StatelessWidget {
   final ElementType element;

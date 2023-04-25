@@ -1,4 +1,4 @@
-import 'package:flutter_timer/scenes/pokedex/utils/pokemon_element.dart';
+import 'package:flutter_timer/utils/pokemon_element.dart';
 
 class PokemonList {
   final int id;

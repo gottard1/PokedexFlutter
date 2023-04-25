@@ -1,18 +1,17 @@
 part of 'pokedex_cubit.dart';
 
-abstract class PokedexState extends Equatable {
-  PokedexState();
+abstract class PokedexListState {}
 
-  @override
-  List<Object> get props => [];
+class InitialPokedex extends PokedexListState {}
+
+class LoadingPokedex extends PokedexListState {}
+
+class ErrorPokedex extends PokedexListState {
+  final String message;
+  ErrorPokedex(this.message);
 }
 
-class PokedexInitial extends PokedexState {}
-
-class PokedexError extends PokedexState {
-  final String? error;
-
-  PokedexError({this.error});
+class ResultPokedex extends PokedexListState {
+  List<PokedexList> pokemons;
+  ResultPokedex(this.pokemons);
 }
-
-class PokedexFetch extends PokedexState {}
