@@ -1,15 +1,15 @@
-import 'dart:core';
+import 'package:flutter_timer/models/pokedex_result_model.dart';
 
 class PokedexList {
   final int count;
-  final String next;
-  final String previous;
+  final String? next;
+  final String? previous;
   final List<PokedexResult> results;
 
   PokedexList({
     required this.count,
-    required this.next,
-    required this.previous,
+    this.next,
+    this.previous,
     required this.results,
   });
 
@@ -23,23 +23,6 @@ class PokedexList {
       next: json['next'],
       previous: json['previous'],
       results: results,
-    );
-  }
-}
-
-class PokedexResult {
-  final String name;
-  final String url;
-
-  PokedexResult({
-    required this.name,
-    required this.url,
-  });
-
-  factory PokedexResult.fromJson(Map<String, dynamic> json) {
-    return PokedexResult(
-      name: json['name'],
-      url: json['url'],
     );
   }
 }

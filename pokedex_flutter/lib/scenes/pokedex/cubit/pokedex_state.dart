@@ -12,6 +12,6 @@ class ErrorPokedex extends PokedexListState {
 }
 
 class ResultPokedex extends PokedexListState {
-  List<PokedexList> pokemons;
+  List<Pokemon> pokemons;
   ResultPokedex(this.pokemons);
 }

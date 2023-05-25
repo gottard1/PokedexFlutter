@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_timer/scenes/pokedex/cubit/pokedex_cubit.dart';
+import 'package:flutter_timer/scenes/pokedex/screen/select_type_page.dart';
 import 'package:flutter_timer/scenes/pokedex/widgets/pokedex_list_widget.dart';
-import 'package:flutter_timer/utils/pokemon_element.dart';
-import 'package:flutter_timer/utils/pokemon_list.dart';
+import 'package:flutter_timer/utils/pokemon.dart';
+
+import '../widgets/filter_button_widget.dart';
 
 class Pokedex extends StatefulWidget {
   @override
@@ -11,6 +13,8 @@ class Pokedex extends StatefulWidget {
 }
 
 class _PokedexState extends State<Pokedex> {
+  ScrollController scrollController = ScrollController();
+
   @override
   void initState() {
     super.initState();
@@ -18,6 +22,15 @@ class _PokedexState extends State<Pokedex> {
       final cubit = context.read<PokedexListCubit>();
       cubit.fetchPokedex();
     });
+    scrollController.addListener(_scrollListener);
+  }
+
+  void _scrollListener() {
+    if (scrollController.position.pixels ==
+        scrollController.position.maxScrollExtent) {
+      final cubit = context.read<PokedexListCubit>();
+      cubit.fetchNextPage();
+    }
   }
 
   @override
@@ -34,13 +47,55 @@ class _PokedexState extends State<Pokedex> {
           );
         } else if (state is ResultPokedex) {
           final pokemons = state.pokemons;
-          return ListView.builder(
-              itemCount: pokemons.length,
-              itemBuilder: (context, index) {
-                final pokemon = PokemonList(
-                    id: 2, name: 'Bulbasaur', element: [ElementType.GRASS]);
-                return PokedexList(pokemon: pokemon);
-              });
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: pokemons.length + 1,
+                  itemBuilder: (context, index) {
+                    if (index == 0) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          FilterButton(
+                            title: 'Todos os tipos',
+                            onButtonPressed: () async {
+                              final result = await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  fullscreenDialog: true,
+                                  builder: (context) => PokemonTypesList(),
+                                ),
+                              );
+                              if (result != null) {
+                                BlocProvider.of<PokedexListCubit>(context)
+                                    .filterPokedex(result);
+                              }
+                            },
+                          ),
+                          FilterButton(
+                            title: 'Menor número',
+                            onButtonPressed: () {},
+                          ),
+                        ],
+                      );
+                    } else {
+                      final pokemon = pokemons[index - 1];
+                      final pokemonCard = Pokemon(
+                        name: pokemon.name,
+                        id: pokemon.id,
+                        image: pokemon.image,
+                        types: pokemon.types,
+                      );
+                      return PokedexList(pokemon: pokemonCard);
+                    }
+                  },
+                ),
+              ),
+            ],
+          );
         } else if (state is ErrorPokedex) {
           return Center(child: Text(state.message));
         }

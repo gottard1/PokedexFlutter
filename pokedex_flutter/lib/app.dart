@@ -14,9 +14,14 @@ class App extends StatelessWidget {
       child: MaterialApp(
         title: 'Pokedex',
         theme: ThemeData(
-          primaryColor: Color.fromARGB(255, 255, 255, 255),
-          colorScheme: const ColorScheme.light(
-            secondary: Color.fromRGBO(255, 255, 255, 1),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            titleTextStyle: TextStyle(
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontFamily: 'poppins',
+              fontSize: 20.0,
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
         home: Pokedex(),

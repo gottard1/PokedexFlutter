@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import '../commom/colors.dart';
+import '../utils/colors.dart';
 
 enum ElementType {
   FIRE,
